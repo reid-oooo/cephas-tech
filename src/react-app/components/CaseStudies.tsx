@@ -130,20 +130,6 @@ export default function CaseStudies() {
 
         <div className="text-center">
           <div className="bg-gradient-to-r from-amber-600/20 to-blue-600/20 rounded-2xl p-8 border border-slate-700/30 backdrop-blur-sm">
-            <div className="flex justify-center space-x-8 mb-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-400 mb-1">$8M+</div>
-                <div className="text-slate-300 text-sm">Value Generated</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-400 mb-1">50%+</div>
-                <div className="text-slate-300 text-sm">Avg Efficiency Gain</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-amber-400 mb-1">180+</div>
-                <div className="text-slate-300 text-sm">Countries Served</div>
-              </div>
-            </div>
             <p className="text-slate-300 text-lg mb-6">
               Ready to write your own success story? Let's discuss how Cephas can transform your business.
             </p>
