@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Calendar } from 'lucide-react';
+import { Mail, MapPin, Send, Calendar } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -43,16 +43,6 @@ export default function Contact() {
             <div className="space-y-6 mb-8">
               <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
-                  <Phone className="text-amber-700" size={20} />
-                </div>
-                <div>
-                  <div className="font-semibold text-slate-900">Phone</div>
-                  <div className="text-slate-600">+1 (901) 570-1702</div>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
                   <Mail className="text-amber-700" size={20} />
                 </div>
                 <div>
@@ -71,23 +61,23 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-4">
+             {/* <div className="flex items-center space-x-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
                   <Calendar className="text-amber-700" size={20} />
                 </div>
                 <div>
                   <div className="font-semibold text-slate-900">Schedule</div>
                   <div className="text-slate-600">Mon-Fri, 9AM-6PM EST</div>
-                </div>
-              </div>
-            </div>
+                </div> 
+              </div> */}
+            </div> 
 
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-8 text-white">
               <h4 className="text-xl font-bold mb-4">Why Choose Cephas?</h4>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
-                  Proven track record across 25+ industries
+                  Proven track record from startups to enterprise clients
                 </li>
                 <li className="flex items-center">
                   <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>

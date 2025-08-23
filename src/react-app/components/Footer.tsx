@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -22,16 +22,12 @@ export default function Footer() {
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-slate-300">
-                <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3 text-slate-300">
                 <Mail size={16} />
-                <span>hello@cephasconsulting.com</span>
+                <span>contact@cephas.tech</span>
               </div>
               <div className="flex items-center space-x-3 text-slate-300">
                 <MapPin size={16} />
-                <span>New York, NY</span>
+                <span>West Palm Beach, FL</span>
               </div>
             </div>
           </div>
@@ -57,8 +53,8 @@ export default function Footer() {
               <li><a href="#process" className="text-slate-300 hover:text-amber-400 transition-colors">Our Process</a></li>
               <li><a href="#case-studies" className="text-slate-300 hover:text-amber-400 transition-colors">Case Studies</a></li>
               <li><a href="#contact" className="text-slate-300 hover:text-amber-400 transition-colors">Contact</a></li>
-              <li><a href="/careers" className="text-slate-300 hover:text-amber-400 transition-colors">Careers</a></li>
-              <li><a href="/blog" className="text-slate-300 hover:text-amber-400 transition-colors">Insights</a></li>
+            {/*  <li><a href="/careers" className="text-slate-300 hover:text-amber-400 transition-colors">Careers</a></li> */}
+            {/*  <li><a href="/blog" className="text-slate-300 hover:text-amber-400 transition-colors">Blog</a></li> */}
             </ul>
           </div>
         </div>
@@ -95,7 +91,7 @@ export default function Footer() {
                 </a>
               </div>
               <div className="text-slate-400 text-sm">
-                © 2024 Cephas Consulting. All rights reserved.
+                © 2025 Cephas Consulting. All rights reserved.
               </div>
             </div>
           </div>
@@ -109,18 +105,17 @@ export default function Footer() {
           "@type": "ProfessionalService",
           "name": "Cephas Consulting",
           "description": "Strategic business consulting services built on solid foundations. Transform your business with expert guidance and proven methodologies.",
-          "url": "https://cephasconsulting.com",
+          "url": "https://cephas.tech",
           "logo": "/images/cephas.png",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-555-123-4567",
             "contactType": "customer service",
-            "email": "hello@cephasconsulting.com"
+            "email": "contact@cephas.tech"
           },
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "New York",
-            "addressRegion": "NY",
+            "addressLocality": "West Palm Beach",
+            "addressRegion": "FL",
             "addressCountry": "US"
           },
           "serviceType": ["Strategic Planning", "Organizational Development", "Performance Optimization", "Digital Transformation", "Operational Excellence", "Innovation Consulting"],
