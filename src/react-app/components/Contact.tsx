@@ -1,27 +1,6 @@
-import { Mail, MapPin, Send } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, MapPin } from 'lucide-react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
     <section id="contact" className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,12 +21,22 @@ export default function Contact() {
             
             <div className="space-y-6 mb-8">
               <div className="flex items-center space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
-                  <Mail className="text-amber-700" size={20} />
-                </div>
+                <a 
+                  href="mailto:contact@cephas.tech?subject=Get%20In%20Touch"
+                  className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center hover:from-amber-200 hover:to-amber-300 transition-all duration-200 cursor-pointer group"
+                >
+                  <Mail className="text-amber-700 group-hover:text-amber-800 transition-colors duration-200" size={20} />
+                </a>
                 <div>
                   <div className="font-semibold text-slate-900">Email</div>
-                  <div className="text-slate-600">contact@cephas.tech</div>
+                  <div className="text-slate-600">
+                    <a 
+                      href="mailto:contact@cephas.tech?subject=Get%20In%20Touch"
+                      className="text-amber-600 hover:text-amber-700 transition-colors duration-200 underline decoration-amber-300 hover:decoration-amber-500"
+                    >
+                      contact@cephas.tech
+                    </a>
+                  </div>
                 </div>
               </div>
               
@@ -60,16 +49,6 @@ export default function Contact() {
                   <div className="text-slate-600">West Palm Beach, FL</div>
                 </div>
               </div>
-              
-             {/* <div className="flex items-center space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center">
-                  <Calendar className="text-amber-700" size={20} />
-                </div>
-                <div>
-                  <div className="font-semibold text-slate-900">Schedule</div>
-                  <div className="text-slate-600">Mon-Fri, 9AM-6PM EST</div>
-                </div> 
-              </div> */}
             </div> 
 
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-8 text-white">
@@ -99,7 +78,10 @@ export default function Contact() {
           <div className="bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
             <h3 className="text-2xl font-bold text-slate-900 mb-6">Send Us a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
+              {/* Replace with your Access Key */}
+              <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} />
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
@@ -110,8 +92,6 @@ export default function Contact() {
                     id="name"
                     name="name"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
                     placeholder="Your full name"
                   />
@@ -125,8 +105,6 @@ export default function Contact() {
                     id="email"
                     name="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
                     placeholder="your@email.com"
                   />
@@ -141,35 +119,36 @@ export default function Contact() {
                   type="text"
                   id="company"
                   name="company"
-                  value={formData.company}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors"
                   placeholder="Your company name"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">
+                <label htmlFor="project-details" className="block text-sm font-semibold text-slate-700 mb-2">
                   Project Details *
                 </label>
                 <textarea
-                  id="message"
-                  name="message"
+                  id="project-details"
+                  name="project details"
                   required
                   rows={5}
-                  value={formData.message}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-colors resize-none"
                   placeholder="Tell us about your project, challenges, and goals..."
                 ></textarea>
               </div>
+
+              {/* Honeypot Spam Protection */}
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
+              {/* Custom Confirmation / Success Page */}
+              <input type="hidden" name="redirect" value={`${window.location.origin}/thank-you`} />
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-lg flex items-center justify-center gap-2"
+                className="w-full px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white"
               >
                 Send Message
-                <Send size={18} />
               </button>
             </form>
 

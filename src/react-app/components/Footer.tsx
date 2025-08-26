@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -61,20 +61,17 @@ export default function Footer() {
         
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-6 mb-4 md:mb-0">
+            <div className="flex space-x-4 mb-4 md:mb-0">
               <a href="/privacy" className="text-slate-400 hover:text-slate-300 transition-colors text-sm">
                 Privacy Policy
               </a>
               <a href="/terms" className="text-slate-400 hover:text-slate-300 transition-colors text-sm">
                 Terms of Service
               </a>
-              <a href="/cookies" className="text-slate-400 hover:text-slate-300 transition-colors text-sm">
-                Cookie Policy
-              </a>
             </div>
             
             <div className="flex items-center space-x-4">
-              <div className="flex space-x-3">
+              {/* <div className="flex space-x-3">
                 <a 
                   href="https://linkedin.com/company/cephas-consulting" 
                   className="text-slate-400 hover:text-amber-400 transition-colors"
@@ -89,7 +86,7 @@ export default function Footer() {
                 >
                   <Twitter size={20} />
                 </a>
-              </div>
+              </div> */}
               <div className="text-slate-400 text-sm">
                 © 2025 Cephas Consulting. All rights reserved.
               </div>
