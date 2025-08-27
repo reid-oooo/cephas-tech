@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aqlcmmakpbcsw.mocha.app/sitemap.xml
+Sitemap: https://cephas.tech/sitemap.xml
 
 # Crawl delay (optional, helps with server load)
 Crawl-delay: 1

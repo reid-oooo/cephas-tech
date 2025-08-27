@@ -5,43 +5,43 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   
   <url>
-    <loc>https://aqlcmmakpbcsw.mocha.app/</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https://www.cephas.tech/</loc>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>https://aqlcmmakpbcsw.mocha.app/#services</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https://www.cephas.tech/#services</loc>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-    <loc>https://aqlcmmakpbcsw.mocha.app/#about</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https:/www.cephas.tech/#about</loc>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://aqlcmmakpbcsw.mocha.app/#process</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https://www.cephas.tech/#process</loc>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
-    <loc>https://aqlcmmakpbcsw.mocha.app/#case-studies</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https://www.cephas.tech/#case-studies</loc>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
-    <loc>https://aqlcmmakpbcsw.mocha.app/#contact</loc>
-    <lastmod>2024-08-22</lastmod>
+    <loc>https://www.cephas.tech/#contact</loc>
+    <lastmod>2025-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
