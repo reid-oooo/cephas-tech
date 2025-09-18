@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
   "functions": {
     "server.js": {
-      "runtime": "nodejs@18.x"
+      "runtime": "nodejs18.x"
     }
   },
   "routes": [
