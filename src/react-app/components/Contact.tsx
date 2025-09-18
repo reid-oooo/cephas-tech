@@ -142,7 +142,7 @@ export default function Contact() {
               <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
               {/* Custom Confirmation / Success Page */}
-              <input type="hidden" name="redirect" value={`${window.location.origin}/thank-you`} />
+              <input type="hidden" name="redirect" value={`${typeof window !== 'undefined' ? window.location.origin : 'https://cephas.tech'}/thank-you`} />
               
               <button
                 type="submit"

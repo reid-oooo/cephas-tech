@@ -9,6 +9,16 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 5000,
+    rollupOptions: {
+      input: {
+        client: 'src/react-app/entry-client.jsx',
+        server: 'src/react-app/entry-server.jsx',
+      },
+    },
+  },
+  ssr: {
+    noExternal: ['react-router-dom', 'react-router'],
+    external: ['react', 'react-dom'],
   },
   resolve: {
     alias: {

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Analytics } from '@vercel/analytics/react';
 import HomePage from "@/react-app/pages/Home";
 import Privacy from "@/react-app/pages/Privacy";
@@ -7,7 +7,7 @@ import ThankYou from "@/react-app/pages/ThankYou";
 
 export default function App() {
   return (
-    <Router>
+    <>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/privacy" element={<Privacy />} />
@@ -15,6 +15,6 @@ export default function App() {
         <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
       <Analytics />
-    </Router>
+    </>
   );
 }
