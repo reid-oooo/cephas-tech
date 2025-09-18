@@ -148,8 +148,14 @@ app.use((req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-}).on('error', (err) => {
-  console.error('Server error:', err);
-});
+// Export the app for Vercel serverless functions
+export default app;
+
+// Only start the server if running locally
+if (process.env.NODE_ENV !== 'production' || process.env.VERCEL !== '1') {
+  app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+  }).on('error', (err) => {
+    console.error('Server error:', err);
+  });
+}
