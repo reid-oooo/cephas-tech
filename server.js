@@ -16,7 +16,10 @@ try {
   manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
 } catch (error) {
   console.error('Failed to load Vite manifest:', error);
-  process.exit(1);
+  // In serverless environment, don't exit - just log and continue
+  if (process.env.VERCEL !== '1') {
+    process.exit(1);
+  }
 }
 
 // Load and cache HTML template at startup
@@ -26,7 +29,10 @@ try {
   htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
 } catch (error) {
   console.error('Failed to load HTML template:', error);
-  process.exit(1);
+  // In serverless environment, don't exit - just log and continue
+  if (process.env.VERCEL !== '1') {
+    process.exit(1);
+  }
 }
 
 // Helper function to get asset paths from manifest
@@ -60,15 +66,24 @@ function injectAssets(template, appHtml) {
   return html;
 }
 
-// Import the render function from the built server entry
-let render;
-try {
-  const serverPath = path.resolve(__dirname, './dist/server/entry-server.js');
-  const serverModule = await import(serverPath);
-  render = serverModule.render;
-} catch (error) {
-  console.error('Failed to import server module:', error);
-  process.exit(1);
+// Cache for the render function
+let renderCache = null;
+
+// Function to get the render function (with caching)
+async function getRenderFunction() {
+  if (renderCache) {
+    return renderCache;
+  }
+  
+  try {
+    const serverPath = path.resolve(__dirname, './dist/server/entry-server.js');
+    const serverModule = await import(serverPath);
+    renderCache = serverModule.render;
+    return renderCache;
+  } catch (error) {
+    console.error('Failed to import server module:', error);
+    throw error;
+  }
 }
 
 // Serve static assets
@@ -79,6 +94,7 @@ app.use('/images', express.static(path.resolve(__dirname, './public/images')));
 app.get('/', async (req, res) => {
   try {
     const url = req.originalUrl;
+    const render = await getRenderFunction();
     const appHtml = render(url);
     
     // Use cached HTML template
@@ -94,6 +110,7 @@ app.get('/', async (req, res) => {
 app.get('/privacy', async (req, res) => {
   try {
     const url = req.originalUrl;
+    const render = await getRenderFunction();
     const appHtml = render(url);
     
     const html = injectAssets(htmlTemplate, appHtml);
@@ -108,6 +125,7 @@ app.get('/privacy', async (req, res) => {
 app.get('/terms', async (req, res) => {
   try {
     const url = req.originalUrl;
+    const render = await getRenderFunction();
     const appHtml = render(url);
     
     const html = injectAssets(htmlTemplate, appHtml);
@@ -122,6 +140,7 @@ app.get('/terms', async (req, res) => {
 app.get('/thank-you', async (req, res) => {
   try {
     const url = req.originalUrl;
+    const render = await getRenderFunction();
     const appHtml = render(url);
     
     const html = injectAssets(htmlTemplate, appHtml);
@@ -134,9 +153,10 @@ app.get('/thank-you', async (req, res) => {
 });
 
 // Catch-all for any other routes
-app.use((req, res) => {
+app.use(async (req, res) => {
   try {
     const url = req.originalUrl;
+    const render = await getRenderFunction();
     const appHtml = render(url);
     
     const html = injectAssets(htmlTemplate, appHtml);
