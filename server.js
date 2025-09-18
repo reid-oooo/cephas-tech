@@ -46,14 +46,16 @@ function getAssetPaths() {
 function injectAssets(template, appHtml) {
   const assets = getAssetPaths();
   
-  // Replace SSR placeholder
-  let html = template.replace('<div id="root">', `<div id="root">${appHtml}`);
+  // Replace SSR placeholder with direct marker replacement
+  let html = template.replace('<!--ssr-outlet-->', appHtml);
   
-  // Replace CSS placeholder
-  html = html.replace('{{CSS_ASSET}}', assets.css[0] || '');
+  // Replace CSS placeholder - handle missing CSS gracefully
+  const cssAsset = Array.isArray(assets.css) && assets.css.length > 0 ? assets.css[0] : '';
+  html = html.replace('{{CSS_ASSET}}', cssAsset);
   
-  // Replace JS placeholder
-  html = html.replace('{{JS_ASSET}}', assets.js);
+  // Replace JS placeholder - handle both string and array cases
+  const jsAsset = Array.isArray(assets.js) ? assets.js[0] : assets.js;
+  html = html.replace('{{JS_ASSET}}', jsAsset);
   
   return html;
 }
