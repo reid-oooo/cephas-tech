@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
   "functions": {
     "api/index.js": {
       "maxDuration": 30
@@ -16,6 +17,10 @@
     },
     {
       "src": "/favicon.ico",
+      "dest": "/public/images/cephas.png"
+    },
+    {
+      "src": "/favicon.png",
       "dest": "/public/images/cephas.png"
     },
     {
