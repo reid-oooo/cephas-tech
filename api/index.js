@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+// Get the project root directory (one level up from api)
+const projectRoot = path.resolve(__dirname, '..');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -12,7 +14,7 @@ const port = process.env.PORT || 3000;
 // Load Vite manifest to get correct asset paths
 let manifest;
 try {
-  const manifestPath = path.resolve(__dirname, './dist/client/.vite/manifest.json');
+  const manifestPath = path.resolve(projectRoot, './dist/client/.vite/manifest.json');
   manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
 } catch (error) {
   console.error('Failed to load Vite manifest:', error);
@@ -23,7 +25,7 @@ try {
 }
 
 // Load and cache HTML template at startup
-const templatePath = path.resolve(__dirname, './dist/index.html');
+const templatePath = path.resolve(projectRoot, './dist/index.html');
 let htmlTemplate;
 try {
   htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
@@ -102,7 +104,7 @@ async function getRenderFunction() {
   }
   
   try {
-    const serverPath = path.resolve(__dirname, './dist/server/entry-server.js');
+    const serverPath = path.resolve(projectRoot, './dist/server/entry-server.js');
     const serverModule = await import(serverPath);
     renderCache = serverModule.render;
     return renderCache;
@@ -113,8 +115,8 @@ async function getRenderFunction() {
 }
 
 // Serve static assets
-app.use('/assets', express.static(path.resolve(__dirname, './dist/client/assets')));
-app.use('/images', express.static(path.resolve(__dirname, './public/images')));
+app.use('/assets', express.static(path.resolve(projectRoot, './dist/client/assets')));
+app.use('/images', express.static(path.resolve(projectRoot, './public/images')));
 
 // Handle all routes - use a specific pattern that works
 app.get('/', async (req, res) => {
