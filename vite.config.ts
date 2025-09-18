@@ -9,6 +9,7 @@ export default defineConfig({
   },
   build: {
     chunkSizeWarningLimit: 5000,
+    manifest: true,
     rollupOptions: {
       input: {
         client: 'src/react-app/entry-client.jsx',

@@ -4,9 +4,14 @@ import { StaticRouter } from 'react-router-dom';
 import App from './App';
 
 export function render(url) {
-  return renderToString(
-    <StaticRouter location={url}>
-      <App />
-    </StaticRouter>
-  );
+  try {
+    return renderToString(
+      <StaticRouter location={url}>
+        <App />
+      </StaticRouter>
+    );
+  } catch (error) {
+    console.error('Server rendering error:', error);
+    throw error; // Re-throw to let the server handle it
+  }
 }
