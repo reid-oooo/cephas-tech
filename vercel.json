@@ -1,12 +1,11 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
+  "functions": {
+    "server.js": {
+      "runtime": "@vercel/node@3"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/assets/(.*)",
@@ -15,6 +14,10 @@
     {
       "src": "/images/(.*)",
       "dest": "/public/images/$1"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/public/images/cephas.png"
     },
     {
       "src": "/(.*)",

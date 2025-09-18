@@ -29,6 +29,20 @@ try {
   htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
 } catch (error) {
   console.error('Failed to load HTML template:', error);
+  // Fallback HTML template for serverless environment
+  htmlTemplate = `<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Cephas</title>
+    <link rel="stylesheet" href="{{CSS_ASSET}}">
+  </head>
+  <body>
+    <div id="root"><!--ssr-outlet--></div>
+    <script type="module" src="{{JS_ASSET}}"></script>
+  </body>
+</html>`;
   // In serverless environment, don't exit - just log and continue
   if (process.env.VERCEL !== '1') {
     process.exit(1);
@@ -37,9 +51,21 @@ try {
 
 // Helper function to get asset paths from manifest
 function getAssetPaths() {
+  if (!manifest) {
+    // Fallback when manifest is not available
+    return {
+      js: '/assets/index.js',
+      css: []
+    };
+  }
+  
   const clientEntry = manifest['src/react-app/entry-client.jsx'];
   if (!clientEntry) {
-    throw new Error('Client entry not found in manifest');
+    // Fallback when client entry is not found
+    return {
+      js: '/assets/index.js',
+      css: []
+    };
   }
   
   return {
