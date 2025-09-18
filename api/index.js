@@ -160,6 +160,14 @@ async function getRenderFunction() {
 app.use('/assets', express.static(path.resolve(projectRoot, './dist/client/assets')));
 app.use('/images', express.static(path.resolve(projectRoot, './public/images')));
 
+// Handle favicon requests
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.resolve(projectRoot, './public/images/cephas.png'));
+});
+app.get('/favicon.png', (req, res) => {
+  res.sendFile(path.resolve(projectRoot, './public/images/cephas.png'));
+});
+
 // Handle all routes - use a specific pattern that works
 app.get('/', async (req, res) => {
   try {
