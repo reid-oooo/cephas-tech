@@ -25,30 +25,72 @@ try {
 }
 
 // Load and cache HTML template at startup
-const templatePath = path.resolve(projectRoot, './dist/index.html');
 let htmlTemplate;
 try {
+  const templatePath = path.resolve(projectRoot, './dist/index.html');
+  console.log('Attempting to load HTML template from:', templatePath);
+  console.log('Project root:', projectRoot);
+  
+  // Check if the dist directory exists
+  const distPath = path.resolve(projectRoot, './dist');
+  if (fs.existsSync(distPath)) {
+    console.log('Dist directory exists, contents:', fs.readdirSync(distPath));
+  } else {
+    console.log('Dist directory does not exist');
+  }
+  
   htmlTemplate = fs.readFileSync(templatePath, 'utf-8');
+  console.log('Successfully loaded HTML template from dist/index.html');
 } catch (error) {
-  console.error('Failed to load HTML template:', error);
-  // Fallback HTML template for serverless environment
+  console.log('Using fallback HTML template (dist/index.html not found)');
+  console.log('Error details:', error.message);
+  // Comprehensive fallback HTML template for serverless environment
   htmlTemplate = `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Cephas</title>
+    <meta name="description" content="Cephas Consulting - Strategic business consulting services built on solid foundations. Transform your business with expert guidance and proven methodologies."/>
+    <meta name="keywords" content="business consulting, strategic consulting, management consulting, business transformation, strategy development, organizational consulting"/>
+    <meta property="og:title" content="Cephas"/>
+    <meta property="og:description" content="Consulting site"/>
+    <meta property="og:image" content="/images/cephas.png" type="image/png"/>
+    <meta property="og:url" content="https://cephas.tech"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:author" content="Cephas Consulting"/>
+    <meta property="og:site_name" content="Cephas"/>
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:site" content="@cephas_consulting"/>
+    <meta property="twitter:title" content="Cephas"/>
+    <meta property="twitter:description" content="Consulting site"/>
+    <meta property="twitter:image" content="/images/cephas.png" type="image/png"/>
+    
+    <!-- SEO Enhancements -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+    <meta name="googlebot" content="index, follow"/>
+    <meta name="language" content="English"/>
+    <meta name="revisit-after" content="7 days"/>
+    <meta name="theme-color" content="#d97706"/>
+    <link rel="canonical" href="https://cephas.tech/"/>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Vite CSS -->
     <link rel="stylesheet" href="{{CSS_ASSET}}">
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/images/cephas.png" type="image/png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/cephas.png" type="image/png"/>
+    <title>Cephas</title>
   </head>
   <body>
     <div id="root"><!--ssr-outlet--></div>
     <script type="module" src="{{JS_ASSET}}"></script>
   </body>
 </html>`;
-  // In serverless environment, don't exit - just log and continue
-  if (process.env.VERCEL !== '1') {
-    process.exit(1);
-  }
 }
 
 // Helper function to get asset paths from manifest
