@@ -53,7 +53,7 @@ export default function Header() {
               alt="Cephas Consulting Logo" 
               className="h-8 w-auto"
             />
-            <span className="text-2xl font-serif text-amber-600 tracking-wide">CEPHAS</span>
+            <span className="text-2xl font-serif text-amber-500 tracking-wide">CEPHAS</span>
           </button>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -70,17 +70,23 @@ export default function Header() {
               Case Studies
             </a>
             <a href="#contact" className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-md transition-all duration-200 font-medium shadow-lg">
-              Contact
+              Let's Talk
             </a>
           </nav>
           
-          <button 
-            className="md:hidden text-slate-300"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: Contact button + Hamburger menu */}
+          <div className="md:hidden flex items-center space-x-3">
+            <a href="#contact" className="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-md transition-all duration-200 font-medium shadow-lg text-sm">
+              Let's Talk
+            </a>
+            <button 
+              className="text-slate-300"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
         
         {isMenuOpen && (
@@ -90,7 +96,7 @@ export default function Header() {
               <a href="#about" className="block px-3 py-2 text-slate-300 hover:text-amber-500">About</a>
               <a href="#process" className="block px-3 py-2 text-slate-300 hover:text-amber-500">Process</a>
               <a href="#case-studies" className="block px-3 py-2 text-slate-300 hover:text-amber-500">Case Studies</a>
-              <a href="#contact" className="block px-3 py-2 bg-amber-600 text-white rounded-md mx-3 text-center">Contact</a>
+              <a href="#contact" className="block px-3 py-2 bg-amber-600 text-white rounded-md mx-3 text-center">Let's Talk</a>
             </div>
           </div>
         )}

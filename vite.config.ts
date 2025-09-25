@@ -7,6 +7,8 @@ export default defineConfig({
   server: {
     allowedHosts: true,
   },
+  root: '.',
+  publicDir: 'public',
   build: {
     chunkSizeWarningLimit: 5000,
     manifest: true,

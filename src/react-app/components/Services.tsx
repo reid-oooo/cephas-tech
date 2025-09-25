@@ -3,19 +3,19 @@ import { Search, Building2, Mountain } from 'lucide-react';
 const services = [
   {
     icon: Search,
-    title: "Cephas Cornerstone Audit",
+    title: "Cornerstone Audit",
     description: "The foundational step for AI transformation. Assess your tech stack and AI readiness in 2-4 weeks, delivering a clear roadmap to accelerate growth and reduce costs.",
     features: ["Tech Stack Assessment", "AI Readiness Evaluation", "Strategic Roadmap", "Risk Assessment", "Implementation Timeline"]
   },
   {
     icon: Building2,
-    title: "Cephas Structure Solutions",
+    title: "Structure Solutions",
     description: "Robust, scalable AI solutions that build on the audit's foundation. Deliver targeted AI implementations, such as automation or analytics, to drive efficiency and ROI.",
     features: ["AI Implementation", "Process Automation", "Analytics Integration", "Performance Monitoring", "Team Training"]
   },
   {
     icon: Mountain,
-    title: "Cephas Summit Transformation",
+    title: "Summit Transformation",
     description: "Reach the peak of business potential through enterprise-wide AI transformation. Scale AI across your organization or productize solutions for new revenue streams, ensuring lasting impact.",
     features: ["Enterprise AI Strategy", "Organization-wide Implementation", "Revenue Stream Development", "Change Management", "Long-term Support"]
   }
@@ -42,14 +42,18 @@ export default function Services() {
               className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-200 group hover:-translate-y-1"
             >
               <div className="mb-6">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg mb-4 group-hover:from-amber-200 group-hover:to-amber-300 transition-all duration-300">
-                  <service.icon className="text-amber-700" size={24} />
+                {/* Icon and Title Row */}
+                <div className="flex items-center mb-3">
+                  <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg mr-3 group-hover:from-amber-200 group-hover:to-amber-300 transition-all duration-300 flex-shrink-0">
+                    <service.icon className="text-amber-700" size={20} />
+                  </div>
+                  <h3 className="text-xl font-bold text-slate-900">{service.title}</h3>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{service.title}</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">{service.description}</p>
               </div>
               
-              <div className="space-y-2">
+              {/* Features - Hidden on mobile/tablet */}
+              <div className="hidden lg:block space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-sm text-slate-600">
                     <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>

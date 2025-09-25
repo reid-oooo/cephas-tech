@@ -65,14 +65,18 @@ export default function Process() {
                 </div>
                 
                 <div className="text-left">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white rounded-lg shadow-md mb-4 group-hover:shadow-lg transition-all duration-300">
-                    <step.icon className="text-slate-700" size={24} />
+                  {/* Icon and Title Row */}
+                  <div className="flex items-center mb-3">
+                    <div className="inline-flex items-center justify-center w-10 h-10 bg-white rounded-lg shadow-md mr-3 group-hover:shadow-lg transition-all duration-300 flex-shrink-0">
+                      <step.icon className="text-slate-700" size={20} />
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900">{step.title}</h3>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 text-left">{step.title}</h3>
                   <p className="text-slate-600 mb-4 leading-relaxed text-left">{step.description}</p>
                   
-                  <div className="bg-white rounded-lg p-4 shadow-sm border border-slate-200">
+                  {/* Bullet Points - Hidden on mobile/tablet */}
+                  <div className="hidden lg:block bg-white rounded-lg p-4 shadow-sm border border-slate-200">
                     <div className="space-y-2">
                       {step.details.map((detail, detailIndex) => (
                         <div key={detailIndex} className="flex items-center text-sm text-slate-600 text-left">

@@ -168,6 +168,24 @@ app.get('/favicon.png', (req, res) => {
   res.sendFile(path.resolve(projectRoot, './public/images/cephas.png'));
 });
 
+// Handle robots.txt
+app.get('/robots.txt', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain');
+  res.sendFile(path.resolve(projectRoot, './public/robots.txt'));
+});
+
+// Handle sitemap.xml
+app.get('/sitemap.xml', (req, res) => {
+  res.setHeader('Content-Type', 'application/xml');
+  res.sendFile(path.resolve(projectRoot, './public/sitemap.xml'));
+});
+
+// Handle llm.txt
+app.get('/llm.txt', (req, res) => {
+  res.setHeader('Content-Type', 'text/plain');
+  res.sendFile(path.resolve(projectRoot, './public/llm.txt'));
+});
+
 // Handle all routes - use a specific pattern that works
 app.get('/', async (req, res) => {
   try {

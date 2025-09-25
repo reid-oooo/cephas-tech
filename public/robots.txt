@@ -1,7 +1,28 @@
-User-agent: *
+AI Allows in
+# Core search + AI assistants
+User-agent: GPTBot
 Allow: /
-
-# Sitemap
+ 
+User-agent: OAI-SearchBot
+Allow: /
+ 
+User-agent: Googlebot
+Allow: /
+ 
+# Let Google use content for Gemini APIs
+User-agent: Google-Extended
+Allow: /
+ 
+# Research/assistants that power many LLM answers
+User-agent: CCBot
+Allow: /
+ 
+User-agent: ClaudeBot
+Allow: /
+ 
+User-agent: PerplexityBot
+Allow: /
+ 
 Sitemap: https://cephas.tech/sitemap.xml
 
 # Crawl delay (optional, helps with server load)
