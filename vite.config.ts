@@ -14,7 +14,7 @@ export default defineConfig({
     manifest: true,
     rollupOptions: {
       input: {
-        main: 'index-vite.html',
+        main: 'index.html',
         client: 'src/react-app/entry-client.jsx',
         server: 'src/react-app/entry-server.jsx',
       },

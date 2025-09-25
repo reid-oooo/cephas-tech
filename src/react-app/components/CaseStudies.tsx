@@ -63,8 +63,8 @@ const caseStudies = [
 
 export default function CaseStudies() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(null);
-  const [touchEnd, setTouchEnd] = useState(null);
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+ const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   // Minimum distance for swipe
   const minSwipeDistance = 50;
@@ -95,7 +95,7 @@ export default function CaseStudies() {
   };
 
   const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
+    if (touchStart === null || touchEnd === null) return;
     
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;

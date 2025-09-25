@@ -32,7 +32,7 @@
         "vite": "6.3.2"
     },
     "scripts": {
-        "build:client": "vite build --outDir dist/client && cp dist/client/index-vite.html dist/index.html",
+        "build:client": "vite build --outDir dist/client && cp dist/client/index.html dist/index.html",
         "build:server": "vite build --ssr src/react-app/entry-server.jsx --outDir dist/server",
         "build": "npm run build:client && npm run build:server",
         "vercel-build": "npm run build",
