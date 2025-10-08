@@ -23,6 +23,7 @@ export default function Contact() {
               <div className="flex items-center space-x-4">
                 <a 
                   href="mailto:contact@cephas.tech?subject=Get%20In%20Touch"
+                  aria-label="contact@cephas.tech"
                   className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center hover:from-amber-200 hover:to-amber-300 transition-all duration-200 cursor-pointer group"
                 >
                   <Mail className="text-amber-700 group-hover:text-amber-800 transition-colors duration-200" size={20} />
@@ -32,6 +33,7 @@ export default function Contact() {
                   <div className="text-slate-600">
                     <a 
                       href="mailto:contact@cephas.tech?subject=Get%20In%20Touch"
+                      aria-label="contact@cephas.tech"
                       className="text-amber-600 hover:text-amber-700 transition-colors duration-200 underline decoration-amber-300 hover:decoration-amber-500"
                     >
                       contact@cephas.tech

@@ -35,17 +35,17 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/30">
             <Mountain className="text-amber-500 mb-3" size={32} />
-            <h3 className="text-slate-200 font-semibold text-lg mb-2">Rock-Solid Strategy</h3>
+            <h2 className="text-slate-200 font-semibold text-lg mb-2">Rock-Solid Strategy</h2>
             <p className="text-slate-400 text-center">Built on proven frameworks and deep industry expertise</p>
           </div>
           <div className="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/30">
             <TrendingUp className="text-blue-500 mb-3" size={32} />
-            <h3 className="text-slate-200 font-semibold text-lg mb-2">Measurable Growth</h3>
+            <h2 className="text-slate-200 font-semibold text-lg mb-2">Measurable Growth</h2>
             <p className="text-slate-400 text-center">Data-driven approaches that deliver quantifiable results</p>
           </div>
           <div className="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/30">
             <Shield className="text-emerald-500 mb-3" size={32} />
-            <h3 className="text-slate-200 font-semibold text-lg mb-2">Trusted Partnership</h3>
+            <h2 className="text-slate-200 font-semibold text-lg mb-2">Trusted Partnership</h2>
             <p className="text-slate-400 text-center">Long-term relationships built on trust and transparency</p>
           </div>
         </div>

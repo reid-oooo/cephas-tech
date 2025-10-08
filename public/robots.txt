@@ -1,4 +1,3 @@
-AI Allows in
 # Core search + AI assistants
 User-agent: GPTBot
 Allow: /

@@ -14,7 +14,7 @@ export default function Header() {
 
   // More robust approach using useEffect
   useEffect(() => {
-    const handleLogoClick = (e) => {
+    const handleLogoClick = (e: Event) => {
       console.log('Logo clicked via useEffect!');
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -49,7 +49,7 @@ export default function Header() {
             type="button"
           >
             <img 
-              src="/images/cephas.png" 
+              src="/images/cephas.svg" 
               alt="Cephas Consulting Logo" 
               className="h-8 w-auto"
             />
@@ -69,7 +69,7 @@ export default function Header() {
             <a href="#case-studies" className="text-slate-300 hover:text-amber-500 transition-colors font-medium py-2">
               Case Studies
             </a>
-            <a href="#contact" className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-md transition-all duration-200 font-medium shadow-lg">
+            <a href="#contact" className="bg-amber-700 hover:bg-amber-600 text-white px-6 py-2 rounded-md transition-all duration-200 font-medium shadow-lg">
               Let's Talk
             </a>
           </nav>
