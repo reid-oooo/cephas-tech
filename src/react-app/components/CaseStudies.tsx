@@ -81,16 +81,16 @@ export default function CaseStudies() {
     );
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
-  const onTouchStart = (e) => {
+  const onTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
 
-  const onTouchMove = (e) => {
+  const onTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
 
@@ -124,10 +124,10 @@ export default function CaseStudies() {
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
             Case Studies
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <h3 className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Real results from real clients. See how Cephas has transformed businesses across industries 
             through strategic AI implementation and platform development.
-          </p>
+          </h3>
         </div>
 
         {/* Desktop: Grid Layout */}

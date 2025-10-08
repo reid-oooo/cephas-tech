@@ -15,8 +15,8 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Information */}
-          <div>
+          {/* Contact Information - Hidden on tablet/mobile, shown on desktop */}
+          <div className="hidden lg:block">
             <h3 className="text-2xl font-bold text-slate-900 mb-8">Get In Touch</h3>
             
             <div className="space-y-6 mb-8">
@@ -24,9 +24,9 @@ export default function Contact() {
                 <a 
                   href="mailto:contact@cephas.tech?subject=Get%20In%20Touch"
                   aria-label="contact@cephas.tech"
-                  className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-100 to-amber-200 rounded-lg flex items-center justify-center hover:from-amber-200 hover:to-amber-300 transition-all duration-200 cursor-pointer group"
+                  className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-amber-200 to-amber-100 rounded-lg flex items-center justify-center hover:from-amber-300 hover:to-amber-200 transition-all duration-200 cursor-pointer group"
                 >
-                  <Mail className="text-amber-700 group-hover:text-amber-800 transition-colors duration-200" size={20} />
+                  <Mail className="text-amber-800 group-hover:text-amber-700 transition-colors duration-200" size={20} />
                 </a>
                 <div>
                   <div className="font-semibold text-slate-900">Email</div>
@@ -34,7 +34,7 @@ export default function Contact() {
                     <a 
                       href="mailto:contact@cephas.tech?subject=Get%20In%20Touch"
                       aria-label="contact@cephas.tech"
-                      className="text-amber-600 hover:text-amber-700 transition-colors duration-200 underline decoration-amber-300 hover:decoration-amber-500"
+                      className="text-amber-700 hover:text-amber-600 transition-colors duration-200 underline decoration-amber-500 hover:decoration-amber-500"
                     >
                       contact@cephas.tech
                     </a>
@@ -77,7 +77,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
+          <div className="bg-white rounded-2xl shadow-xl p-8 border border-slate-200 lg:col-start-2">
             <h3 className="text-2xl font-bold text-slate-900 mb-6">Send Us a Message</h3>
             
             <form action="https://api.web3forms.com/submit" method="POST" className="space-y-6">
@@ -157,6 +157,29 @@ export default function Contact() {
             <div className="mt-6 text-center text-sm text-slate-500">
               <p>We typically respond within 24 hours during business days.</p>
             </div>
+          </div>
+
+          {/* Why Choose Cephas - Shown on tablet/mobile after form, under contact email info on desktop */}
+          <div className="lg:hidden bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-8 text-white">
+            <h4 className="text-xl font-bold mb-4">Why Choose Cephas?</h4>
+            <ul className="space-y-3">
+              <li className="flex items-center">
+                <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
+                Proven track record from startups to enterprise clients
+              </li>
+              <li className="flex items-center">
+                <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
+                Customized solutions for your unique challenges
+              </li>
+              <li className="flex items-center">
+                <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
+                Ongoing support throughout implementation
+              </li>
+              <li className="flex items-center">
+                <div className="w-2 h-2 bg-amber-500 rounded-full mr-3"></div>
+                Measurable results and ROI tracking
+              </li>
+            </ul>
           </div>
         </div>
       </div>

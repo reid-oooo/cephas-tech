@@ -48,10 +48,13 @@ export default function Header() {
             onClick={scrollToTop}
             type="button"
           >
-            <img 
-              src="/images/cephas.svg" 
-              alt="Cephas Consulting Logo" 
-              className="h-8 w-auto"
+            <img
+              src="/images/cephas.svg"
+              alt="Cephas Consulting Logo"
+              width={32}
+              height={32}
+              className="block"
+              loading="lazy"
             />
             <span className="text-2xl font-serif text-amber-500 tracking-wide">CEPHAS</span>
           </button>
