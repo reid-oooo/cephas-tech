@@ -53,8 +53,7 @@ export default function Header() {
               alt="Cephas Consulting Logo"
               width={32}
               height={32}
-              className="block"
-              loading="lazy"
+              className="block"              
             />
             <span className="text-2xl font-serif text-amber-500 tracking-wide">CEPHAS</span>
           </button>
