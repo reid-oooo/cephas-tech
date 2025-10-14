@@ -66,7 +66,7 @@ export default function Testimonials() {
               
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="font-medium text-white">{testimonial.name}</div>
                   <div className="text-slate-400">{testimonial.title}</div>
                 </div>
                 <div className="text-amber-500 text-sm font-medium">

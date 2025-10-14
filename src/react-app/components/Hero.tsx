@@ -22,11 +22,11 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a href="#contact" className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+          <a href="#contact" className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-lg font-medium text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
             Get Strategic Consultation
             <ArrowRight size={20} />
           </a>
-          <a href="#process" className="border border-slate-600 text-slate-200 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-800 hover:border-slate-500 transition-all duration-200 inline-block text-center">
+          <a href="#process" className="border border-slate-600 text-slate-200 px-8 py-4 rounded-lg font-medium text-lg hover:bg-slate-800 hover:border-slate-500 transition-all duration-200 inline-block text-center">
             View Our Process
           </a>
         </div>
@@ -35,17 +35,17 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/30">
             <Mountain className="text-amber-500 mb-3" size={32} />
-            <h2 className="text-slate-200 font-semibold text-lg mb-2">Rock-Solid Strategy</h2>
+            <h2 className="text-slate-200 font-medium text-lg mb-2">Rock-Solid Strategy</h2>
             <p className="text-slate-400 text-center">Built on proven frameworks and deep industry expertise</p>
           </div>
           <div className="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/30">
             <TrendingUp className="text-blue-500 mb-3" size={32} />
-            <h2 className="text-slate-200 font-semibold text-lg mb-2">Measurable Growth</h2>
+            <h2 className="text-slate-200 font-medium text-lg mb-2">Measurable Growth</h2>
             <p className="text-slate-400 text-center">Data-driven approaches that deliver quantifiable results</p>
           </div>
           <div className="flex flex-col items-center p-6 bg-slate-800/50 rounded-xl backdrop-blur-sm border border-slate-700/30">
             <Shield className="text-emerald-500 mb-3" size={32} />
-            <h2 className="text-slate-200 font-semibold text-lg mb-2">Trusted Partnership</h2>
+            <h2 className="text-slate-200 font-medium text-lg mb-2">Trusted Partnership</h2>
             <p className="text-slate-400 text-center">Long-term relationships built on trust and transparency</p>
           </div>
         </div>

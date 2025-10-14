@@ -99,7 +99,7 @@ export default function Process() {
               Let's discuss how our proven process can help you achieve your strategic objectives 
               and build lasting competitive advantages.
             </p>
-            <a href="#contact" className="inline-block bg-gradient-to-r from-amber-600 to-amber-700 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-xl">
+            <a href="#contact" className="inline-block bg-gradient-to-r from-amber-600 to-amber-700 text-white px-10 py-4 rounded-lg font-medium text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-xl">
               Get in Touch
             </a>
           </div>

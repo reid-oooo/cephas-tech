@@ -30,7 +30,7 @@ export default function About() {
                 <div className="flex items-start space-x-4">
                   <Shield className="text-amber-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Strength</h4>
+                    <h4 className="text-lg font-medium text-white mb-2">Strength</h4>
                     <p className="text-slate-300">Robust strategies for lasting success.</p>
                   </div>
                 </div>
@@ -38,7 +38,7 @@ export default function About() {
                 <div className="flex items-start space-x-4">
                   <HandHeart className="text-blue-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Trust</h4>
+                    <h4 className="text-lg font-medium text-white mb-2">Trust</h4>
                     <p className="text-slate-300">Your trusted partner with transparent guidance.</p>
                   </div>
                 </div>
@@ -46,7 +46,7 @@ export default function About() {
                 <div className="flex items-start space-x-4">
                   <Lightbulb className="text-emerald-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Optimism</h4>
+                    <h4 className="text-lg font-medium text-white mb-2">Optimism</h4>
                     <p className="text-slate-300">Unlocking your business's full potential.</p>
                   </div>
                 </div>
@@ -54,7 +54,7 @@ export default function About() {
                 <div className="flex items-start space-x-4">
                   <Compass className="text-purple-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Navigation</h4>
+                    <h4 className="text-lg font-medium text-white mb-2">Navigation</h4>
                     <p className="text-slate-300">Clear roadmaps through complex challenges.</p>
                   </div>
                 </div>
@@ -62,7 +62,7 @@ export default function About() {
                 <div className="flex items-start space-x-4">
                   <Award className="text-orange-500 mt-1 flex-shrink-0" size={24} />
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Excellence</h4>
+                    <h4 className="text-lg font-medium text-white mb-2">Excellence</h4>
                     <p className="text-slate-300">Measurable, transformative results.</p>
                   </div>
                 </div>

@@ -31,7 +31,7 @@ export default function ThankYou() {
                 <span className="text-amber-700 font-bold text-sm">1</span>
               </div>
               <div>
-                <h3 className="font-semibold text-slate-900">Review Your Project</h3>
+                <h3 className="font-medium text-slate-900">Review Your Project</h3>
                 <p className="text-slate-600 text-sm">Our team will carefully review your requirements and project details</p>
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function ThankYou() {
                 <span className="text-amber-700 font-bold text-sm">2</span>
               </div>
               <div>
-                <h3 className="font-semibold text-slate-900">Initial Consultation</h3>
+                <h3 className="font-medium text-slate-900">Initial Consultation</h3>
                 <p className="text-slate-600 text-sm">We'll schedule a call to discuss your project in detail</p>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function ThankYou() {
                 <span className="text-amber-700 font-bold text-sm">3</span>
               </div>
               <div>
-                <h3 className="font-semibold text-slate-900">Custom Proposal</h3>
+                <h3 className="font-medium text-slate-900">Custom Proposal</h3>
                 <p className="text-slate-600 text-sm">Receive a tailored solution and implementation plan</p>
               </div>
             </div>
@@ -62,14 +62,14 @@ export default function ThankYou() {
         <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-xl p-6 text-white mb-8">
           <div className="flex items-center justify-center space-x-3 mb-4">
             <Mail className="text-amber-400" size={24} />
-            <span className="text-lg font-semibold">Need Immediate Assistance?</span>
+            <span className="text-lg font-medium">Need Immediate Assistance?</span>
           </div>
           <p className="text-slate-300 mb-4">
             For urgent matters, feel free to reach out directly:
           </p>
           <a 
             href="mailto:contact@cephas.tech?subject=Urgent%20Inquiry"
-            className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+            className="inline-block bg-amber-600 hover:bg-amber-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200"
           >
             Email Us Directly
           </a>
@@ -78,7 +78,7 @@ export default function ThankYou() {
         {/* Back to Home */}
         <Link 
           to="/"
-          className="inline-flex items-center space-x-2 text-amber-600 hover:text-amber-700 font-semibold transition-colors duration-200"
+          className="inline-flex items-center space-x-2 text-amber-600 hover:text-amber-700 font-medium transition-colors duration-200"
         >
           <ArrowLeft size={20} />
           <span>Back to Home</span>

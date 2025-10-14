@@ -34,12 +34,12 @@ export default function Privacy() {
 
             <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Interpretation and Definitions</h2>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Interpretation</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Interpretation</h3>
             <p className="text-slate-700 mb-6">
               The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
             </p>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Definitions</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Definitions</h3>
             <p className="text-slate-700 mb-4">For the purposes of this Privacy Policy:</p>
             <ul className="list-disc pl-6 space-y-3 text-slate-700 mb-8">
               <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
@@ -58,9 +58,9 @@ export default function Privacy() {
 
             <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-6">Collecting and Using Your Personal Data</h2>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Types of Data Collected</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Types of Data Collected</h3>
             
-            <h4 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Personal Data</h4>
+            <h4 className="text-lg font-medium text-slate-900 mt-6 mb-3">Personal Data</h4>
             <p className="text-slate-700 mb-4">
               While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
             </p>
@@ -70,7 +70,7 @@ export default function Privacy() {
               <li>Usage Data</li>
             </ul>
             
-            <h4 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Usage Data</h4>
+            <h4 className="text-lg font-medium text-slate-900 mt-6 mb-3">Usage Data</h4>
             <p className="text-slate-700 mb-4">Usage Data is collected automatically when using the Service.</p>
             <p className="text-slate-700 mb-6">
               Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
@@ -82,7 +82,7 @@ export default function Privacy() {
               We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
             </p>
             
-            <h4 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Tracking Technologies</h4>
+            <h4 className="text-lg font-medium text-slate-900 mt-6 mb-3">Tracking Technologies</h4>
             <p className="text-slate-700 mb-4">
               We may use tracking technologies to monitor the activity on Our Service and collect certain information to improve and analyze Our Service. The technologies We use may include:
             </p>
@@ -94,7 +94,7 @@ export default function Privacy() {
               Currently, our website does not use cookies. However, we may implement cookies in the future to improve user experience and website functionality. Any future use of cookies will be clearly communicated and users will have the option to opt-out.
             </p>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Use of Your Personal Data</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Use of Your Personal Data</h3>
             <p className="text-slate-700 mb-4">The Company may use Personal Data for the following purposes:</p>
             <ul className="list-disc pl-6 space-y-3 text-slate-700 mb-6">
               <li><strong>To provide and maintain our Service</strong>, including to monitor the usage of our Service.</li>
@@ -117,7 +117,7 @@ export default function Privacy() {
               <li><strong>With Your consent</strong>: We may disclose Your personal information for any other purpose with Your consent.</li>
             </ul>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Retention of Your Personal Data</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Retention of Your Personal Data</h3>
             <p className="text-slate-700 mb-6">
               The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
             </p>
@@ -125,7 +125,7 @@ export default function Privacy() {
               The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
             </p>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Transfer of Your Personal Data</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Transfer of Your Personal Data</h3>
             <p className="text-slate-700 mb-6">
               Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
             </p>
@@ -136,7 +136,7 @@ export default function Privacy() {
               The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
             </p>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Delete Your Personal Data</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Delete Your Personal Data</h3>
             <p className="text-slate-700 mb-6">
               You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
             </p>
@@ -150,19 +150,19 @@ export default function Privacy() {
               Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
             </p>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Disclosure of Your Personal Data</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Disclosure of Your Personal Data</h3>
             
-            <h4 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Business Transactions</h4>
+            <h4 className="text-lg font-medium text-slate-900 mt-6 mb-3">Business Transactions</h4>
             <p className="text-slate-700 mb-6">
               If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
             </p>
             
-            <h4 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Law enforcement</h4>
+            <h4 className="text-lg font-medium text-slate-900 mt-6 mb-3">Law enforcement</h4>
             <p className="text-slate-700 mb-6">
               Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
             </p>
             
-            <h4 className="text-lg font-semibold text-slate-900 mt-6 mb-3">Other legal requirements</h4>
+            <h4 className="text-lg font-medium text-slate-900 mt-6 mb-3">Other legal requirements</h4>
             <p className="text-slate-700 mb-4">The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
             <ul className="list-disc pl-6 space-y-2 text-slate-700 mb-8">
               <li>Comply with a legal obligation</li>
@@ -172,7 +172,7 @@ export default function Privacy() {
               <li>Protect against legal liability</li>
             </ul>
             
-            <h3 className="text-xl font-semibold text-slate-900 mt-8 mb-4">Security of Your Personal Data</h3>
+            <h3 className="text-xl font-medium text-slate-900 mt-8 mb-4">Security of Your Personal Data</h3>
             <p className="text-slate-700 mb-8">
               The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
             </p>

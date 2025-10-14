@@ -66,7 +66,7 @@ export default function Services() {
         </div>
 
         <div className="text-center mt-12">
-          <a href="#contact" className="inline-block bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-lg">
+          <a href="#contact" className="inline-block bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-lg font-medium text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-lg">
             Start Your AI Journey
           </a>
         </div>

@@ -29,7 +29,7 @@ export default function Contact() {
                   <Mail className="text-amber-800 group-hover:text-amber-700 transition-colors duration-200" size={20} />
                 </a>
                 <div>
-                  <div className="font-semibold text-slate-900">Email</div>
+                  <div className="font-medium text-slate-900">Email</div>
                   <div className="text-slate-600">
                     <a 
                       href="mailto:contact@cephas.tech?subject=Get%20In%20Touch"
@@ -47,7 +47,7 @@ export default function Contact() {
                   <MapPin className="text-amber-700" size={20} />
                 </div>
                 <div>
-                  <div className="font-semibold text-slate-900">Office</div>
+                  <div className="font-medium text-slate-900">Office</div>
                   <div className="text-slate-600">West Palm Beach, FL</div>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
                     Full Name *
                   </label>
                   <input
@@ -99,7 +99,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                     Email Address *
                   </label>
                   <input
@@ -114,7 +114,7 @@ export default function Contact() {
               </div>
               
               <div>
-                <label htmlFor="company" className="block text-sm font-semibold text-slate-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
                   Company Name
                 </label>
                 <input
@@ -127,7 +127,7 @@ export default function Contact() {
               </div>
               
               <div>
-                <label htmlFor="project-details" className="block text-sm font-semibold text-slate-700 mb-2">
+                <label htmlFor="project-details" className="block text-sm font-medium text-slate-700 mb-2">
                   Project Details *
                 </label>
                 <textarea
@@ -148,7 +148,7 @@ export default function Contact() {
               
               <button
                 type="submit"
-                className="w-full px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 shadow-lg bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white"
+                className="w-full px-8 py-4 rounded-lg font-medium text-lg transition-all duration-200 shadow-lg bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white"
               >
                 Send Message
               </button>

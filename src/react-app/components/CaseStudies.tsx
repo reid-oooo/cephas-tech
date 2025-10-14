@@ -40,6 +40,7 @@ const caseStudies = [
     icon: TrendingUp,
     results: [
       "50% reduction in SDR manual outreach",
+      "$250k+ in annual savings",
       "Improved lead-to-demo conversion rate",
       "24/7 global engagement and faster sales cycle"
     ],
@@ -153,7 +154,7 @@ export default function CaseStudies() {
                     <study.icon className="text-amber-400" size={20} />
                   </div>
                   <div>
-                    <div className="text-white font-semibold text-lg">{study.title}</div>
+                    <div className="text-white font-medium text-lg">{study.title}</div>
                     <div className="text-slate-300 text-sm">{study.client}</div>
                   </div>
                 </div>
@@ -162,15 +163,15 @@ export default function CaseStudies() {
               {/* Case Study Content */}
               <div className="p-8">
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-amber-400 mb-2">Challenge</h4>
+                  <h4 className="text-lg font-medium text-amber-400 mb-2">Challenge</h4>
                   <p className="text-slate-300 leading-relaxed mb-4">{study.challenge}</p>
                   
-                  <h4 className="text-lg font-semibold text-blue-400 mb-2">Solution</h4>
+                  <h4 className="text-lg font-medium text-blue-400 mb-2">Solution</h4>
                   <p className="text-slate-300 leading-relaxed mb-6">{study.solution}</p>
                 </div>
                 
                 <div>
-                  <h4 className="text-lg font-semibold text-emerald-400 mb-4">Impact</h4>
+                  <h4 className="text-lg font-medium text-emerald-400 mb-4">Impact</h4>
                   <div className="space-y-3">
                     {study.results.map((result, resultIndex) => (
                       <div key={resultIndex} className="flex items-start space-x-3">
@@ -216,7 +217,7 @@ export default function CaseStudies() {
                           <study.icon className="text-amber-400" size={20} />
                         </div>
                         <div>
-                          <div className="text-white font-semibold text-lg">{study.title}</div>
+                          <div className="text-white font-medium text-lg">{study.title}</div>
                           <div className="text-slate-300 text-sm">{study.client}</div>
                         </div>
                       </div>
@@ -225,15 +226,15 @@ export default function CaseStudies() {
                     {/* Case Study Content */}
                     <div className="p-6">
                       <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-amber-400 mb-2">Challenge</h4>
+                        <h4 className="text-lg font-medium text-amber-400 mb-2">Challenge</h4>
                         <p className="text-slate-300 leading-relaxed mb-4">{study.challenge}</p>
                         
-                        <h4 className="text-lg font-semibold text-blue-400 mb-2">Solution</h4>
+                        <h4 className="text-lg font-medium text-blue-400 mb-2">Solution</h4>
                         <p className="text-slate-300 leading-relaxed mb-6">{study.solution}</p>
                       </div>
                       
                       <div>
-                        <h4 className="text-lg font-semibold text-emerald-400 mb-4">Impact</h4>
+                        <h4 className="text-lg font-medium text-emerald-400 mb-4">Impact</h4>
                         <div className="space-y-3">
                           {study.results.map((result, resultIndex) => (
                             <div key={resultIndex} className="flex items-start space-x-3">
@@ -288,7 +289,7 @@ export default function CaseStudies() {
             <p className="text-slate-300 text-lg mb-6">
               Ready to write your own success story? Let's discuss how Cephas can transform your business.
             </p>
-            <a href="#contact" className="inline-block bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-lg flex items-center justify-center gap-2 mx-auto">
+            <a href="#contact" className="inline-block bg-gradient-to-r from-amber-600 to-amber-700 text-white px-8 py-4 rounded-lg font-medium text-lg hover:from-amber-700 hover:to-amber-800 transition-all duration-200 shadow-lg flex items-center justify-center gap-2 mx-auto">
               Start Your Transformation
               <ArrowRight size={18} />
             </a>
